@@ -8,7 +8,7 @@ import { Movie } from 'src/app/models/movie.model';
   providedIn: 'root'
 })
 export class MovieService {
-  apiKey = '2bc49ac29568477c0075c56cba2ed307';
+  apiKey = '';
   constructor(private httpClient: HttpClient) { }
 
   getTrendingMovies (): Observable<Movie[]> {
