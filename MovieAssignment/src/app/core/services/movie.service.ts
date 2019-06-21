@@ -40,6 +40,14 @@ export class MovieService {
       return data['results'];
     }) );
   }
+
+  getRelatedMovies (movieId: string): Observable<Movie[]> {
+    return this.httpClient.get('https://api.themoviedb.org/3/movie/' + movieId + '/similar?api_key=' + this.apiKey + 
+    '&language=en-US&page=1')
+    .pipe(map(data => {
+      return data['results'];
+    }) );
+  }
   getGenres(): Observable<any> {
     return this.httpClient.get('https://api.themoviedb.org/3/genre/movie/list?api_key=' + this.apiKey + '&language=en-US&page=1')
     .pipe(map(data => {

@@ -1,3 +1,12 @@
-<p>
-  movie-details works!
-</p>
+<img src="https://image.tmdb.org/t/p/original/{{movie.poster_path}}" height="500px" alt="">
+
+<div class="movie-container">
+  <div class="movie-details">
+    <h3 class="movie-title">{{movie.original_title}}</h3>
+    <div class="col-md-5">{{movie.overview}}</div>
+  </div>
+  <div class="movie-details">
+      <h3 class="movie-title">{{movie.original_title}}</h3>
+  </div>
+</div>
+<app-movie-list [moviesType] = "Related"></app-movie-list>

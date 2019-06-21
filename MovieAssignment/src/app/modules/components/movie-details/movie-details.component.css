@@ -1,0 +1,12 @@
+.movie-title {
+    font-weight: bold;
+}
+
+.movie-container {
+    display: flex;
+}
+
+.movie-details {
+    width: 50%;
+    margin-top: 30px;
+}

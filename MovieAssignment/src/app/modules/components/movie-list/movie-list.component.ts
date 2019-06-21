@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { MovieService } from 'src/app/core/services/movie.service';
 import { Movie } from 'src/app/models/movie.model';
 import { Genres } from 'src/app/models/genres.modal';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-movie-list',
@@ -28,9 +29,10 @@ export class MovieListComponent implements OnInit {
     observer: true,
 observeParents: true // Space between each Item
   };
-  constructor(private movieService: MovieService) { }
+  constructor(private movieService: MovieService, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
+    const movieID = this.activatedRoute.snapshot.params['id'];
     if (this.moviesType === 'Trending') {
       this.movieService.getTrendingMovies().subscribe((movies: Movie[]) => {
         this.movieList = movies;
@@ -40,7 +42,11 @@ observeParents: true // Space between each Item
       this.movieService.getLatestMovies().subscribe((movies: Movie[]) => {
         this.movieList = movies;
       });
-    } else {
+    } else if (this.moviesType === 'Related') {
+      this.movieService.getRelatedMovies(movieID).subscribe((movies: Movie[]) => {
+        this.movieList = movies;
+      });
+     } else {
       this.movieService.getPopularMovies().subscribe((movies: Movie[]) => {
         this.movieList = movies;
       });
