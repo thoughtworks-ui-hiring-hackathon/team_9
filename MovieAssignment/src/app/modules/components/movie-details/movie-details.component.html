@@ -1,12 +1,45 @@
-<img src="https://image.tmdb.org/t/p/original/{{movie.poster_path}}" height="500px" alt="">
-
-<div class="movie-container">
-  <div class="movie-details">
-    <h3 class="movie-title">{{movie.original_title}}</h3>
-    <div class="col-md-5">{{movie.overview}}</div>
-  </div>
-  <div class="movie-details">
-      <h3 class="movie-title">{{movie.original_title}}</h3>
-  </div>
+<div class="backdrop">
+    <img src="https://image.tmdb.org/t/p/original/{{movie.poster_path}}"  alt="movie poster">
 </div>
-<app-movie-list [moviesType] = "Related"></app-movie-list>
+
+<div class="col-12">
+  
+      <div class="movie-container">
+          <div class="movie-details">
+            <div class="row mt-5 ">
+                <h3 class="movie-title">{{movie.original_title}}</h3>
+            </div>
+            <div class="row">
+                <div class="col-md-6">{{movie.overview}}</div>
+                <div class="col-md-6 details" >
+                  <div class="row" >
+                    <div class=" h3Text col-6">Genres:</div>
+                  <div class="col-6" >
+                    <ul *ngFor="let gen of movie.genres"><li>{{gen.name}}</li></ul> </div>
+                  </div>
+                  <hr>
+                  <div class="row cast" >
+                      <div class=" h3Text col-6">Cast:</div>
+                    <div class="col-6" > <ul *ngFor="let gem of movie.credits.cast"><li>{{gem.character}}</li></ul></div>
+                    </div>
+                    <hr>
+                   <div class="row" >
+                        <div class=" h3Text col-6">Director:</div>
+                      <div class="col-6" *ngFor="let gem of movie.credits.crew"> <p *ngIf="gem.job===Director"></p>{{gem.name}}</div>
+                      </div>
+                      <hr> 
+                      <div class="row" >
+                          <div class=" h3Text col-6">Movie Rating:</div>
+                        <div class="col-6"> {{movie.vote_average/2 | number: '1.0-0'}}</div>
+                        </div>
+                        <hr> 
+                </div>
+            </div>
+           
+          </div>
+      </div>  
+         
+        </div>
+  
+
+<app-movie-list [moviesType] = "'Related'"></app-movie-list>
