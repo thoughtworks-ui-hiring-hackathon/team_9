@@ -34,7 +34,6 @@ observeParents: true // Space between each Item
     if (this.moviesType === 'Trending') {
       this.movieService.getTrendingMovies().subscribe((movies: Movie[]) => {
         this.movieList = movies;
-        console.log(this.movieList);
       });
     } else if (this.moviesType === 'Latest') {
       this.movieService.getLatestMovies().subscribe((movies: Movie[]) => {
@@ -50,8 +49,10 @@ observeParents: true // Space between each Item
   getGenres() {
     this.movieService.getGenres().subscribe((genres: Genres[]) => {
       this.genresList = genres;
-      console.log(this.genresList);
+      
     });
+    
   }
+  
 
 }
