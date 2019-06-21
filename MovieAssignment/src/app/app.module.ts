@@ -8,6 +8,7 @@ import { HomePageComponent } from './modules/components/home-page/home-page.comp
 import { DetailsPageComponent } from './modules/components/details-page/details-page.component';
 import { MovieListComponent } from './modules/components/movie-list/movie-list.component';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
