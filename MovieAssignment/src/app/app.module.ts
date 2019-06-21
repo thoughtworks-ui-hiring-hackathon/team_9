@@ -7,6 +7,7 @@ import { FooterComponent } from './modules/shared components/footer/footer.compo
 import { HomePageComponent } from './modules/components/home-page/home-page.component';
 import { DetailsPageComponent } from './modules/components/details-page/details-page.component';
 import { MovieListComponent } from './modules/components/movie-list/movie-list.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { MovieListComponent } from './modules/components/movie-list/movie-list.c
     MovieListComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
