@@ -10,6 +10,7 @@ import { MovieListComponent } from './modules/components/movie-list/movie-list.c
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { Angular2UsefulSwiperModule } from 'angular2-useful-swiper';
+import { MovieDetailsComponent } from './modules/components/movie-details/movie-details.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +18,8 @@ import { Angular2UsefulSwiperModule } from 'angular2-useful-swiper';
     FooterComponent,
     HomePageComponent,
     DetailsPageComponent,
-    MovieListComponent
+    MovieListComponent,
+    MovieDetailsComponent
   ],
   imports: [
     BrowserModule,

@@ -11,7 +11,7 @@
 
 <swiper [config]="config" #usefulSwiper>
   <div class="swiper-wrapper mar2">
-    <div class="swiper-slide col-2 gridbox" *ngFor="let movie of movieList">
+    <div class="swiper-slide col-2 gridbox" [routerLink]= "['/detail', movie.id]" *ngFor="let movie of movieList">
             <img src="https://image.tmdb.org/t/p/original/{{movie.poster_path}}">
             <div class="col-12">
               <div class="row">
