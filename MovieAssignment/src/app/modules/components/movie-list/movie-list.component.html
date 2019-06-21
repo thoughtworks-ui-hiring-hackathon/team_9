@@ -28,10 +28,12 @@
       
               </div>
             </div>
-            <div class="col-12">
-              <div *ngFor="let id of movie.genre_ids">
+            <div class="col-12 genres">
+              <div class="row"  *ngFor="let id of movie.genre_ids">
                 <div class="h5Text details" *ngFor="let gen of genresList">
-                  <span *ngIf="id==gen.id">{{gen.name}}</span>
+                  <div  class="col-6 rating noMar"  *ngIf="id==gen.id">
+                      {{gen.name}}
+                  </div>
                 </div>
               </div>
             </div>
@@ -40,11 +42,7 @@
               <div class="row">
                 <div class="col-7">
                   <p class="h4Text head">
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
+                      Rating: {{movie.vote_average/2 | number: '1.0-0'}}
                   </p>
                 </div>
                 <div class="col-5">

@@ -1,6 +1,6 @@
 .h2Text{
 font-size: 2rem;
-margin-left : 28px;
+margin-left : 37px;
 }
 .h3Text{
     font-size: 1.5rem
@@ -37,5 +37,8 @@ img{
     margin: 0 4px
 }
 .details{
+    display: inline-block
+}
+.rating{
     display: inline-block
 }
