@@ -8,7 +8,7 @@ import { MovieService } from 'src/app/core/services/movie.service';
   styleUrls: ['./movie-details.component.css']
 })
 export class MovieDetailsComponent implements OnInit {
-  movie: any;
+  movie = {};
   constructor(private activatedRoute: ActivatedRoute, private movieService: MovieService) { }
 
   ngOnInit() {

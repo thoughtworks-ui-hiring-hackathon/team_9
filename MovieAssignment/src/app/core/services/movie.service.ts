@@ -8,7 +8,7 @@ import { Movie } from 'src/app/models/movie.model';
   providedIn: 'root'
 })
 export class MovieService {
-  apiKey = '';
+  apiKey = '2bc49ac29568477c0075c56cba2ed307';
   constructor(private httpClient: HttpClient) { }
 
   getTrendingMovies (): Observable<Movie[]> {
@@ -52,6 +52,14 @@ export class MovieService {
     return this.httpClient.get('https://api.themoviedb.org/3/genre/movie/list?api_key=' + this.apiKey + '&language=en-US&page=1')
     .pipe(map(data => {
       return data['genres'];
+    }) );
+  }
+
+  getSearchedMovies (searchCriteria: string): Observable<Movie[]> {
+    return this.httpClient.get('https://api.themoviedb.org/3/search/multi?api_key=' + this.apiKey +
+      '&language=en-US&query=' + searchCriteria + '&page=1&include_adult=false')
+    .pipe(map(data => {
+      return data['results'];
     }) );
   }
 }

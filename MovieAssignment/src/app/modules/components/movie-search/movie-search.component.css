@@ -1,0 +1,48 @@
+.input-field {
+    margin-top: 30px;
+}
+
+.h2Text{
+    font-size: 2rem;
+    margin-left : 37px;
+    }
+    .h3Text{
+        font-size: 1.5rem
+    }
+    .h4Text{
+        font-size: 1rem;
+    }
+    .h5Text{
+        font-size: 0.8rem;
+    }
+    .heading{
+        text-underline-position: below
+    }
+    .noMar{
+        margin: 0;
+    }
+    .inline-block{
+        display: inline;
+    }
+    .gridbox{
+        border: 1px solid gray;
+        height: 400px;
+        margin: 0 50px
+    }
+    img{
+       
+        height: 200px;
+        width: 100%;
+    }
+    .mar5{
+        margin: 0 10rem;
+    }
+    .mar2{
+        margin: 0 4px
+    }
+    .details{
+        display: inline-block
+    }
+    .rating{
+        display: inline-block
+    }

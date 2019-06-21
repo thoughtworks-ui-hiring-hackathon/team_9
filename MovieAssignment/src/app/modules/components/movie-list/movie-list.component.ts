@@ -11,7 +11,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class MovieListComponent implements OnInit {
   @Input() moviesType: string;
-  movieList: Movie[];
+  movieList: Movie[] = [];
   genresList: Genres[];
   config = {
     autoplay: 3000, // Autoplay option having value in milliseconds
@@ -55,10 +55,6 @@ observeParents: true // Space between each Item
   getGenres() {
     this.movieService.getGenres().subscribe((genres: Genres[]) => {
       this.genresList = genres;
-      
     });
-    
   }
-  
-
 }
