@@ -32,4 +32,11 @@ export class MovieService {
       return data['results'];
     }) );
   }
+  getGenres(): Observable<any> {
+    return this.httpClient.get('https://api.themoviedb.org/3/genre/movie/list?api_key=' + this.apiKey + '&language=en-US&page=1')
+    .pipe(map(data => {
+      return data['genres'];
+    }) );
+  }
+  
 }
