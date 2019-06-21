@@ -38,5 +38,4 @@ export class MovieService {
       return data['genres'];
     }) );
   }
-  
 }

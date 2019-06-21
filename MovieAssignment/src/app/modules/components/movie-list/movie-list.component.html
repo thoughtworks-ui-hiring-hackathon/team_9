@@ -5,45 +5,54 @@
 
   <div class="row  mar10">
 
-    <div class="col-3 gridbox"  *ngFor="let movie of movieList">
-      <img src="https://image.tmdb.org/t/p/original/{{movie.poster_path}}" >
-      <div class="col-12">
-        <div class="row">
-          <div class="col-10">
-            <p class="h4Text head">
-              {{movie.title}}
-            </p>
-          </div>
-          <div class="col-2">
-            <span>
-              <i class="fa fa-heart-o"></i>
-            </span>
-          </div>
-
-        </div>
-      </div>
-      <div class="col-12">
-          <div *ngFor="let id of movie.genre_ids">
-              <div class="h5Text details" *ngFor="let gen of genresList">
-                <span *ngIf="id==gen.id">{{gen.name}}</span>
-              </div>
-            </div>
-      </div>
-      
-      <div class="col-12">
-        <div class="row">
-            <div class="col-7">
-                <p class="h4Text head">
-                  Rating
-                </p>
-              </div>
-              <div class="col-5">
-                <span>
-                  <a href="">show More</a>
-                </span>
-              </div>
-        </div>
-      </div>
-    </div>
+    
   </div>
 </div>
+
+<swiper [config]="config" #usefulSwiper>
+  <div class="swiper-wrapper">
+    <div class="swiper-slide col-3 gridbox" *ngFor="let movie of movieList">
+            <img src="https://image.tmdb.org/t/p/original/{{movie.poster_path}}">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-10">
+                  <p class="h4Text head">
+                    {{movie.title}}
+                  </p>
+                </div>
+                <div class="col-2">
+                  <span>
+                    <i class="fa fa-heart-o"></i>
+                  </span>
+                </div>
+      
+              </div>
+            </div>
+            <div class="col-12">
+              <div *ngFor="let id of movie.genre_ids">
+                <div class="h5Text details" *ngFor="let gen of genresList">
+                  <span *ngIf="id==gen.id">{{gen.name}}</span>
+                </div>
+              </div>
+            </div>
+      
+            <div class="col-12">
+              <div class="row">
+                <div class="col-7">
+                  <p class="h4Text head">
+                    Rating
+                  </p>
+                </div>
+                <div class="col-5">
+                  <span>
+                    <a href="">show More</a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          
+    </div>
+  </div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</swiper>
