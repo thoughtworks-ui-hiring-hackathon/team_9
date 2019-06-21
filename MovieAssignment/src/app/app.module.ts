@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import {  FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './modules/shared components/header/header.component';
 import { FooterComponent } from './modules/shared components/footer/footer.component';
@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { Angular2UsefulSwiperModule } from 'angular2-useful-swiper';
 import { MovieDetailsComponent } from './modules/components/movie-details/movie-details.component';
+import { MovieSearchComponent } from './modules/components/movie-search/movie-search.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,13 +20,15 @@ import { MovieDetailsComponent } from './modules/components/movie-details/movie-
     HomePageComponent,
     DetailsPageComponent,
     MovieListComponent,
-    MovieDetailsComponent
+    MovieDetailsComponent,
+    MovieSearchComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    Angular2UsefulSwiperModule
+    Angular2UsefulSwiperModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

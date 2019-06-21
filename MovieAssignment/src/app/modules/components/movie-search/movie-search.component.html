@@ -1,0 +1,66 @@
+<div class="offset-1 col-md-4 input-field">
+  <input type="text" class="form-control" [(ngModel)] ="searchQuery" (input)="onQueryChange($event.target.value)">
+</div>
+
+<div class="row noMar">
+    <div class="col-12">
+      <p class="h2Text ">{{moviesType}}</p>
+    </div>
+  
+    <div class="row  mar10">
+  
+      
+    </div>
+  </div>
+  
+    <div class="mar2">
+      <div class="col-2 gridbox" [routerLink]= "['/detail', movie.id]" *ngFor="let movie of movieList">
+              <img src="https://image.tmdb.org/t/p/original/{{movie.poster_path}}">
+              <div class="col-12">
+                <div class="row">
+                  <div class="col-10">
+                    <p class="h4Text head">
+                      {{movie.title}}
+                    </p>
+                  </div>
+                  <div class="col-2">
+                    <span>
+                      <i class="fa fa-heart-o"></i>
+                    </span>
+                  </div>
+        
+                </div>
+              </div>
+              <div class="col-12 genres">
+                <div class="row"  *ngFor="let id of movie.genre_ids">
+                  <div class="h5Text details" *ngFor="let gen of genresList">
+                    <div  class="col-6 rating noMar"  *ngIf="id==gen.id">
+                        {{gen.name}}
+                    </div>
+                  </div>
+                </div>
+              </div>
+        
+              <div class="col-12">
+                <div class="row">
+                  <div class="col-7">
+                    <p class="h4Text head">
+                        Rating: {{movie.vote_average/2 | number: '1.0-0'}}
+                    </p>
+                  </div>
+                  <div class="col-5">
+                    <span>
+                      <a [routerLink] = "['/detail', movie.id]">show More</a>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            
+      </div>
+    </div>
+  
+  
+  
+  
+  
+  

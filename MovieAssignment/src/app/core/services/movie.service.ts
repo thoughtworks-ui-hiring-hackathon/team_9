@@ -54,4 +54,12 @@ export class MovieService {
       return data['genres'];
     }) );
   }
+
+  getSearchedMovies (searchCriteria: string): Observable<Movie[]> {
+    return this.httpClient.get('https://api.themoviedb.org/3/search/multi?api_key=' + this.apiKey +
+      '&language=en-US&query=' + searchCriteria + '&page=1&include_adult=false')
+    .pipe(map(data => {
+      return data['results'];
+    }) );
+  }
 }
