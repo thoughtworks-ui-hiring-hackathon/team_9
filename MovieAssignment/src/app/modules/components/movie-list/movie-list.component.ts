@@ -13,7 +13,7 @@ export class MovieListComponent implements OnInit {
   constructor(private movieService: MovieService) { }
 
   ngOnInit() {
-    if (!this.moviesType) {
+    if (this.moviesType === 'Trending') {
       this.movieService.getTrendingMovies().subscribe((movies: Movie[]) => {
         this.movieList = movies;
         console.log(this.movieList);
