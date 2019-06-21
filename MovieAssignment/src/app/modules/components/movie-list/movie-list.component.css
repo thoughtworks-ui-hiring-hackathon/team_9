@@ -1,5 +1,6 @@
 .h2Text{
 font-size: 2rem;
+margin-left : 28px;
 }
 .h3Text{
     font-size: 1.5rem
@@ -21,7 +22,7 @@ font-size: 2rem;
 }
 .gridbox{
     border: 1px solid gray;
-    max-height: 400px;
+    height: 400px;
     margin: 0 50px
 }
 img{
@@ -31,6 +32,9 @@ img{
 }
 .mar5{
     margin: 0 10rem;
+}
+.mar2{
+    margin: 0 4px
 }
 .details{
     display: inline-block

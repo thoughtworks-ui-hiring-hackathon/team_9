@@ -1,6 +1,6 @@
 <div class="row noMar">
   <div class="col-12">
-    <p class="h2Text ">Latest</p>
+    <p class="h2Text ">{{moviesType}}</p>
   </div>
 
   <div class="row  mar10">
@@ -10,8 +10,8 @@
 </div>
 
 <swiper [config]="config" #usefulSwiper>
-  <div class="swiper-wrapper">
-    <div class="swiper-slide col-3 gridbox" *ngFor="let movie of movieList">
+  <div class="swiper-wrapper mar2">
+    <div class="swiper-slide col-2 gridbox" *ngFor="let movie of movieList">
             <img src="https://image.tmdb.org/t/p/original/{{movie.poster_path}}">
             <div class="col-12">
               <div class="row">
@@ -40,7 +40,11 @@
               <div class="row">
                 <div class="col-7">
                   <p class="h4Text head">
-                    Rating
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
                   </p>
                 </div>
                 <div class="col-5">
@@ -53,6 +57,8 @@
           
     </div>
   </div>
-  <div class="swiper-button-next"></div>
-  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next mar2"></div>
+  <div class="swiper-button-prev mar2"></div>
 </swiper>
+
+
