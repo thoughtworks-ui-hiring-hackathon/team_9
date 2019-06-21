@@ -24,9 +24,12 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/swiper/dist/css/swiper.css" ,
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/swiper/dist/js/swiper.js"
+            ]
           },
           "configurations": {
             "production": {

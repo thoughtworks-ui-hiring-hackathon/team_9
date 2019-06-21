@@ -9,7 +9,7 @@ import { DetailsPageComponent } from './modules/components/details-page/details-
 import { MovieListComponent } from './modules/components/movie-list/movie-list.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
-
+import { Angular2UsefulSwiperModule } from 'angular2-useful-swiper';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +22,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    Angular2UsefulSwiperModule
   ],
   providers: [],
   bootstrap: [AppComponent]

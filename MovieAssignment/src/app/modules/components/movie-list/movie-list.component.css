@@ -1,18 +1,4 @@
-.h2Text{
-font-size: 2rem;
-}
-.h3Text{
-    font-size: 1.5rem
-}
-.h4Text{
-    font-size: 1rem;
-}
-.h5Text{
-    font-size: 0.8rem;
-}
-.heading{
-    text-underline-position: below
-}
-.noMar{
-    margin: 0;
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
 }
